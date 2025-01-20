@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { useFormik } from "formik";
+import { isEmptyArray, useFormik } from "formik";
 
 export const FormAndMap = ({ contactoRef }) => {
   const [check, setcheck] = useState(false);
@@ -35,6 +35,9 @@ export const FormAndMap = ({ contactoRef }) => {
   };
 
   const formik = useFormik({
+    if() {
+      console.log(values);
+    },
     initialValues: {
       name: "",
       phone: "",
@@ -48,7 +51,7 @@ export const FormAndMap = ({ contactoRef }) => {
 
   return (
     <div
-      className="flex justify-center items-center w-full bg-gray-100 flex-col gap-16 "
+      className="flex justify-center items-center w-full bg-gray-100 flex-col gap-16 lg:flex-row-reverse xl:gap-x-40"
       ref={contactoRef}
     >
       <div className="p-10 ">
@@ -72,7 +75,7 @@ export const FormAndMap = ({ contactoRef }) => {
               value={formik.values.name}
               name="name"
               placeholder="Nombre"
-              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-orange-500 hover:ease-in-out focus:border-none"
+              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-[#008080] hover:ease-in-out focus:border-none"
             />
           </div>
           <div>
@@ -88,7 +91,7 @@ export const FormAndMap = ({ contactoRef }) => {
               id="phone"
               name="phone"
               placeholder="Telefono"
-              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-orange-500 hover:ease-in-out focus:border-none"
+              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-[#008080] hover:ease-in-out focus:border-none"
             />
           </div>
           <div>
@@ -104,7 +107,7 @@ export const FormAndMap = ({ contactoRef }) => {
               id="mail"
               name="mail"
               placeholder="Email"
-              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-orange-500 hover:ease-in-out focus:border-none"
+              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-[#008080] hover:ease-in-out focus:border-none"
             />
           </div>
           <div>
@@ -120,7 +123,7 @@ export const FormAndMap = ({ contactoRef }) => {
               id="message"
               name="message"
               placeholder="Mensaje"
-              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-orange-500 hover:ease-in-out focus:border-none"
+              className="font-Poppins w-full px-4 py-2 border-b-2 border-black bg-gray-100 text-black focus:outline-none focus:ring-1 focus:ring-black hover:border-b-2 hover:border-[#008080] hover:ease-in-out focus:border-none"
             />
           </div>
           <button
@@ -137,7 +140,7 @@ export const FormAndMap = ({ contactoRef }) => {
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        className="grayscale w-full h-80"
+        className="grayscale w-full h-80 lg:w-[50%]"
       ></iframe>
     </div>
   );

@@ -38,8 +38,10 @@ function App() {
         handleChangeNavbarTransparent={handleChangeNavbarTransparent}
         ofrecimientosRef={ofrecimientosRef}
       />
-      <Dudas></Dudas>
+
       <QuienesSomos></QuienesSomos>
+
+      <Dudas></Dudas>
       <DondeEstamos />
       <FormAndMap contactoRef={contactoRef}></FormAndMap>
       <Footer></Footer>
