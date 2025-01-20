@@ -128,7 +128,7 @@ export const FormAndMap = ({ contactoRef }) => {
           </div>
           <button
             type="submit"
-            className={`${check && "text-green-500"} w-full text-black font-Poppins  w-54 border-2 p-2 text-center rounded-1xl transition duration-700 ease-in-out hover:scale-110  text-xs tracking-widest`}
+            className={`${check && "text-[#008080]"} w-full text-black font-Poppins  w-54 border-2 p-2 text-center rounded-1xl transition duration-700 ease-in-out hover:scale-110  text-xs tracking-widest`}
           >
             {check ? "ENVIADO!" : "ENVIAR CONSULTA"}
           </button>
